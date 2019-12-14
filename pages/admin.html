@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book Town | Resit Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../assets/resitdc/css/resitdc.css">
+  <link rel="stylesheet" type="text/css" href="../assets/resitdc/css/resitdc-dashboard-style.css">
+  <link rel="stylesheet" type="text/css" href="../assets/font-awesome/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/font-awesome/css/brands.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/font-awesome/css/fontawesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/font-awesome/css/regular.min.css">
+  <link rel="stylesheet" type="text/css" href="../assets/font-awesome/css/solid.min.css">
+  <style type="text/css">
+  </style>
+</head>
+<body>
+
+  <div class="fixed-top resit-little-navbar">
+  </div>
+  <nav class="navbar navbar-expand-lg bg-resitbook navbar-light fixed-top resit-shadow" style="margin-top: 25px;">
+    <a class="navbar-brand visible" href="#">
+      <img src="../assets/images/logo.png" class="logo">
+    </a>
+    <form class="form-inline" id="book-search" action="/action_page.php">
+      <input class="form-control mr-sm-2" id="input-search" type="search" placeholder="Cari buku">
+      <button class="btn btn-info" id="button-search" type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <a href="" class="resit-cart"><i class="fa fa-shopping-cart"></i> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse navbar-resit" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto topnav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Buku</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tentang Kami</a>
+        </li>
+        <li class="nav-item">
+          <a href="pages/login.html" class="btn-resit btn-resit-login">Masuk</a>
+        </li>
+        <li class="nav-item">
+          <a href="pages/register.html" class="btn-resit btn-resit-register">Daftar</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrapper" style="margin-top:87px;">
+    <nav id="sidebar" style="
+    left: 0;
+    position: fixed;
+    z-index: 1030;
+    height: 100%;
+    ">
+    <ul class="list-unstyled components">
+      <p>Main Menu</p>
+      <li>
+        <a href="#">Dashboard</a>
+      </li>
+      <li class="active">
+        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Data Master</a>
+        <ul class="collapse list-unstyled" id="homeSubmenu">
+          <li>
+            <a href="#">Data User</a>
+          </li>
+          <li>
+            <a href="#">Data Buku</a>
+          </li>
+          <li>
+            <a href="#">Data Kategori</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Transaksi</a>
+      </li>
+    </ul>
+    </nav>
+    <div id="content" style="margin-left: 250px;">
+      <div class="container">
+        <div class="text-left">
+          <div class="judul-bb text-danger">
+            <span class="text-black">Keyword :</span> Hot Books
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="bg-info resit-filter-bar">
+              Urutkan 
+              <button class="btn btn-warning btn-sm">Terbaru</button>
+              <button class="btn btn-warning btn-sm">Terlaris</button>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="resit-judul-filter">Rentang Harga</div>
+            <input type="text" name="" class="form-control" placeholder="Min" style="margin-bottom: 10px;">
+            <input type="text" name="" class="form-control" placeholder="Max" style="margin-bottom: 10px;">
+            <div class="resit-judul-filter">Filter yang lain</div>
+            <p>Simpan saja filter lain disini</p>
+          </div>
+          <div class="col-9">
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-6 resit-master-box">
+                <div class="resit-box-produk">
+                  <div class="dropdown resit-box-dropdown show">
+                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                      <span class="fa fa-gear"></span>
+                    </a>
+                    <div class="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
+                    </div>
+                  </div>
+                  <a href="#" target="_self">
+                    <div class="resit-produk">
+                      <div class="resit-foto" style="background-image: url('../assets/images/produk/buku1.jpeg');">
+                      </div>
+                      <div class="resit-nama-produk">Dilan 1990</div>
+                      <div class="resit-harga-produk">
+                        <span class="resit-harga">Rp. 220.000</span>
+                        <!-- <span class="resit-harga-diskon">Rp. 250.000</span> -->
+                      </div>
+                      <div style="">
+                        <!-- <button class="btn btn-danger btn-sm" style="position: relative;">Test</button> -->
+                      </div>
+                      <div class="resit-produk-terjual"> Terjual : 52 </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6 resit-master-box">
+                <div class="resit-box-produk">
+                  <div class="dropdown resit-box-dropdown show">
+                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                      <span class="fa fa-gear"></span>
+                    </a>
+                    <div class="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
+                    </div>
+                  </div>
+                  <a href="#" target="_self">
+                    <div class="resit-produk">
+                      <div class="resit-foto" style="background-image: url('../assets/images/produk/buku2.jpg');">
+                      </div>
+                      <div class="resit-nama-produk">Milea - Suara dari Dilan</div>
+                      <div class="resit-harga-produk">
+                        <span class="resit-harga">Rp. 250.000</span>
+                      </div>
+                      <div class="resit-produk-terjual"> Terjual : 52 </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6 resit-master-box">
+                <div class="resit-box-produk">
+                  <div class="dropdown resit-box-dropdown show">
+                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                      <span class="fa fa-gear"></span>
+                    </a>
+                    <div class="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
+                    </div>
+                  </div>
+                  <a href="#" target="_self">
+                    <div class="resit-produk">
+                      <div class="resit-foto" style="background-image: url('../assets/images/produk/buku3.jpg');">
+                      </div>
+                      <div class="resit-nama-produk">One Piece Blue Deep</div>
+                      <div class="resit-harga-produk">
+                        <span class="resit-harga">Rp. 250.000</span>
+                      </div>
+                      <div class="resit-produk-terjual"> Terjual : 52 </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6 resit-master-box">
+                <div class="resit-box-produk">
+                  <div class="dropdown resit-box-dropdown show">
+                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                      <span class="fa fa-gear"></span>
+                    </a>
+                    <div class="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
+                    </div>
+                  </div>
+                  <a href="#" target="_self">
+                    <div class="resit-produk">
+                      <div class="resit-foto" style="background-image: url('../assets/images/produk/buku4.jpg');">
+                      </div>
+                      <div class="resit-nama-produk">Bill Gates - Biacara Soal Restu, Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu</div>
+                      <div class="resit-harga-produk">
+                        <span class="resit-harga">Rp. 250.000</span>
+                      </div>
+                      <div class="resit-produk-terjual"> Terjual : 52 </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6 resit-master-box">
+                <div class="resit-box-produk">
+                  <div class="dropdown resit-box-dropdown show">
+                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                      <span class="fa fa-gear"></span>
+                    </a>
+                    <div class="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
+                    </div>
+                  </div>
+                  <a href="#" target="_self">
+                    <div class="resit-produk">
+                      <div class="resit-foto" style="background-image: url('../assets/images/produk/buku1.jpeg');">
+                      </div>
+                      <div class="resit-nama-produk">Dilan 1990</div>
+                      <div class="resit-harga-produk">
+                        <span class="resit-harga">Rp. 220.000</span>
+                        <!-- <span class="resit-harga-diskon">Rp. 250.000</span> -->
+                      </div>
+                      <div style="">
+                        <!-- <button class="btn btn-danger btn-sm" style="position: relative;">Test</button> -->
+                      </div>
+                      <div class="resit-produk-terjual"> Terjual : 52 </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6 resit-master-box">
+                <div class="resit-box-produk">
+                  <div class="dropdown resit-box-dropdown show">
+                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                      <span class="fa fa-gear"></span>
+                    </a>
+                    <div class="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
+                    </div>
+                  </div>
+                  <a href="#" target="_self">
+                    <div class="resit-produk">
+                      <div class="resit-foto" style="background-image: url('../assets/images/produk/buku2.jpg');">
+                      </div>
+                      <div class="resit-nama-produk">Milea - Suara dari Dilan</div>
+                      <div class="resit-harga-produk">
+                        <span class="resit-harga">Rp. 250.000</span>
+                      </div>
+                      <div class="resit-produk-terjual"> Terjual : 52 </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6 resit-master-box">
+                <div class="resit-box-produk">
+                  <div class="dropdown resit-box-dropdown show">
+                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                      <span class="fa fa-gear"></span>
+                    </a>
+                    <div class="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
+                    </div>
+                  </div>
+                  <a href="#" target="_self">
+                    <div class="resit-produk">
+                      <div class="resit-foto" style="background-image: url('../assets/images/produk/buku3.jpg');">
+                      </div>
+                      <div class="resit-nama-produk">One Piece Blue Deep</div>
+                      <div class="resit-harga-produk">
+                        <span class="resit-harga">Rp. 250.000</span>
+                      </div>
+                      <div class="resit-produk-terjual"> Terjual : 52 </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6 resit-master-box">
+                <div class="resit-box-produk">
+                  <div class="dropdown resit-box-dropdown show">
+                    <a data-toggle="dropdown" href="#" aria-expanded="false">
+                      <span class="fa fa-gear"></span>
+                    </a>
+                    <div class="dropdown-menu resit-box-dropdown-menu" x-placement="top-start">
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/edit/SPT_1005492019531112">Edit</a>
+                      <a class="dropdown-item" tabindex="-1" href="http://127.0.0.1/shoes-web/produk/jual/hapus/SPT_1005492019531112">Hapus</a>
+                    </div>
+                  </div>
+                  <a href="#" target="_self">
+                    <div class="resit-produk">
+                      <div class="resit-foto" style="background-image: url('../assets/images/produk/buku4.jpg');">
+                      </div>
+                      <div class="resit-nama-produk">Bill Gates - Biacara Soal Restu, Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu Bill Gates - Biacara Soal Restu</div>
+                      <div class="resit-harga-produk">
+                        <span class="resit-harga">Rp. 250.000</span>
+                      </div>
+                      <div class="resit-produk-terjual"> Terjual : 52 </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button class="btn btn-warning">Kampret</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
